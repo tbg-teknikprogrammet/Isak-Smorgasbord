@@ -73,3 +73,41 @@ console.log("4 squared is: " + squared(4));
 
 var result = squared(10);
 console.log(result);
+
+
+
+function isEven(x) {
+    if(x % 2 !== 0) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+console.log(isEven(10));
+
+function kebabToSnake(string) {
+
+    var myString = string.replace(/-/g, "_");
+
+    return myString;
+}
+
+console.log(kebabToSnake("Hej-Ted"));
+
+
+function localScope() {
+    var showScope = 31;
+    console.log(showScope);
+}
+
+localScope();
+
+var showScopeY = 99;
+function showScopeY() {
+    showScopeY = 100;
+    console.log(showScopeY);
+}
+
+console.log(showScopeY);
