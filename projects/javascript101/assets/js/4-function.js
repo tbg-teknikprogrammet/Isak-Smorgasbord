@@ -111,3 +111,31 @@ function showScopeY() {
 }
 
 console.log(showScopeY);
+
+// Higher order functions
+
+function sing() {
+    console.log("Im singin in the rain!")
+    console.log("Im not singin in the rain!")
+}
+
+// setInterval(sing, 1600);
+
+// var anon = setInterval(function() {
+//     console.log("I am anon")
+// }, 2500);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("output").innerHTML = d.toLocaleTimeString();
+}
+
+var myTime = setInterval(myTimer , 1000);
+
+document.getElementsByTagName("button")[0].addEventListener("mouseenter", function() {
+   clearInterval(myTime); 
+});
+
+document.querySelector("button").addEventListener("mouseleave", function() {
+    myTime = setInterval(myTimer , 1000);
+});
