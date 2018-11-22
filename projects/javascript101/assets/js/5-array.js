@@ -52,3 +52,32 @@ for(var i = 0; i < cars.length; i++) {
     console.log(cars[i]);
 }
 
+
+var countries = ["Sweden", "Norway", "Finland", "Denmark", "Iceland"];
+countries.forEach(function(country) {
+    console.log(country);
+});
+
+function countryList(country) {
+    console.log(country);
+    console.log("--------------------");
+}
+countries.forEach(countryList);
+
+
+var string = [1, 2, 3, 4, 5]
+
+function printReverse(string) {
+    for(var i = string.length-1; i >= 0; i--) {
+        console.log(string[i]);
+    }
+}
+
+printReverse(string);
+
+
+function isIdentical(ar1) {
+    if(ar1[i] == ar1[ar1.length-1]) {
+
+    }
+}
