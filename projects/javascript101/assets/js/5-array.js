@@ -77,7 +77,24 @@ printReverse(string);
 
 
 function isIdentical(ar1) {
-    if(ar1[i] == ar1[ar1.length-1]) {
-
+    for(var i = 0; i <= ar1.length-1; i++) {
+        if(ar1[0] != ar1[i]) {
+            console.log("Det funkar ej")
+            return false;
+        }
     }
+    console.log("Det funkar")
+    return true;
 }
+
+isIdentical([1,1,1,1,1,1,1]);
+
+function sumArray(ar) {
+    var sum = 0;
+    for(var i = 0; i <= ar.length-1; i++) {
+        sum += ar[i];
+    }
+    console.log(sum);
+    return sum;
+}
+sumArray([1,5,7,9])
