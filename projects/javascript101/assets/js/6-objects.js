@@ -62,5 +62,28 @@ var posts = [{author: "Emanuel", title: "Leg", comments: ["Very cool!", "Yeet"]}
 console.log(posts[1].comments[0])
 
 for(var i = 0; i < posts.length; i++) {
-    console.log(posts[i].title)
+    console.log(posts[i].title, posts[i].author, posts[i].comments)
 }
+
+// Move DB
+
+var movies = [
+    {
+        title: "Darudes Sandstorm",
+        rating: "10",
+        watched: "Yes",
+    },
+    {
+        title: "Lost in Nanking",
+        rating: "8",
+        watched: "no",
+    },
+    {
+        title: "Emanuel the Movie",
+        rating: "0.3",
+        watched: "yes",
+    }
+];
+
+
+
