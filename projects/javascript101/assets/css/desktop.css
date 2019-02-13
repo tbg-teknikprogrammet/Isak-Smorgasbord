@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-    background-color: rgb(41, 37, 37);
+    background-color: #2c2f33;
 }
 
 .some-class {
@@ -14,4 +14,8 @@ body {
 .another-class {
     color: red;
     transform: rotate(4deg);
+}
+
+.toggleBG {
+    background-color: red;
 }
