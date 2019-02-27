@@ -20,7 +20,7 @@ for(var i = 0; i < lis.length; i++) {
 // color changer
 
 var btnToggle = document.querySelector("#btnToggleBg");
- btnToggle.addEventListener("click", function(){
+btnToggle.addEventListener("click", function(){
     document.getElementsByTagName("body")[0].classList.toggle("toggleBg")
  });
 

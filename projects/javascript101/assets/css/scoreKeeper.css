@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+p {
+    font-size: 30px;
+}
+
+.winner {
+    color: green;
+    font-size: 40px;
+}
+
+.looser {
+    color: red;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+
