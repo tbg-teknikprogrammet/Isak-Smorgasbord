@@ -11,7 +11,7 @@ p2.innerHTML = p2Score;
 
 
 document.querySelector("#max").innerHTML = max;
-document.querySelector("input").addEventListener("click", function(){
+document.querySelector("input").addEventListener("input", function(){
     max = document.querySelector("input").value;
     document.querySelector("#max").innerHTML = max;
 });
