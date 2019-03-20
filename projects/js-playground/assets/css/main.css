@@ -17,8 +17,8 @@ main {
     height: 100%;
 }
 
-section {
-    background-color: blue;
+main section {
+    background-color: rgb(44,47,51);
 }
 
 #dab {
@@ -30,9 +30,37 @@ section {
 #light {
     display: none;
     position: absolute; 
+    background-color: rgba(44,47,51, 0.9);
+    width: 100%;
+    height: 100%;
 }
 
 #light img {
-    margin: auto 25%;
     display: block;
+    margin: 3px auto;
+    border-radius: 3px;
+}
+
+#slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slide img {
+    width: 95%;
+}
+
+#slide p {
+    color: white;
+    position: absolute;
+    z-index: 999;
+}
+
+#prev {
+    margin-left: -16%;
+}
+
+#next {
+    margin-left: 16%;
 }
