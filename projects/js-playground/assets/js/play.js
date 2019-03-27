@@ -7,6 +7,14 @@ document.querySelector("#light").addEventListener("click", function(){
     document.querySelector("#light").style = "display:none;"
 });
 
+document.addEventListener("keydown", function(event){
+    if(event.which == 27){
+        document.querySelector("#light").style = "display:none;"
+    }
+});
+
+// //------------------------------
+
 // SLIDESHOW
 var slideShow = ["assets/images/Dabmeister.jpg", "assets/images/Snke.jpg", "assets/images/Xpoke.jpg"]
 var slideIndex = 1;
@@ -15,7 +23,7 @@ document.querySelector("#slide img").src=slideShow[slideIndex];
 document.querySelector("#prev").addEventListener("click", function(){
     slideIndex += -1;
     if(slideIndex < 0 ) {
-        slideIndex = slideShow.length;
+        slideIndex = slideShow.length-1;
     }
     document.querySelector("#slide img").src=slideShow[slideIndex];
 });
@@ -27,6 +35,21 @@ document.querySelector("#next").addEventListener("click", function(){
     }
     document.querySelector("#slide img").src=slideShow[slideIndex];
 });
+// --------------------------------
 
+//Seizure
+var cindex = 0
+document.addEventListener("keydown", function(event){
+    if(event.which == 70){
+        document.querySelector("h1").innerHTML = "You pressed F to pay respect";
+        
+        var colors = ["red", "green", "blue"]
+        
+        document.querySelector("#seiz").style.backgroundColor = colors[cindex];
+        cindex += 1;
 
-
+        for (let i = 0; i < 100; i++) {
+            
+        }
+    }
+});
