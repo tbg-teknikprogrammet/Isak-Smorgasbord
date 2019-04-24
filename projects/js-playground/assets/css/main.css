@@ -46,6 +46,7 @@ main section {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 #slide img {
@@ -81,4 +82,11 @@ main section {
 
 #seiz {
     transition: 3s;
+    text-align: center;
 }
+
+#seiz p {
+    color: white;
+    transition: 4s;
+}
+

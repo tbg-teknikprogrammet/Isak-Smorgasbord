@@ -41,15 +41,49 @@ document.querySelector("#next").addEventListener("click", function(){
 var cindex = 0
 document.addEventListener("keydown", function(event){
     if(event.which == 70){
-        document.querySelector("h1").innerHTML = "You pressed F to pay respect";
+        document.querySelector("h1").innerHTML = "Pressed X to unpay respect";
         
         var colors = ["red", "green", "blue"]
         
         document.querySelector("#seiz").style.backgroundColor = colors[cindex];
         cindex += 1;
 
-        for (let i = 0; i < 100; i++) {
-            
-        }
+        document.querySelector("#seiz p").style.color = "black";
     }
+
+    if(cindex == colors.length) {
+        cindex = 0;
+    }
+});
+
+document.addEventListener("keydown", function(event){
+    if(event.which == 88) {
+        document.querySelector("#seiz").style.backgroundColor = "rgb(44,47,51)";
+
+        document.querySelector("h1").innerHTML = "";
+
+        document.querySelector("#seiz p").style.color = "white";
+    }
+});
+//------------------------------
+
+// timegame
+
+document.querySelector("#time").addEventListener("mouseover", function(){
+
+    document.querySelector("#time").style.backgroundColor = "red";
+
+    var seconds = 0;
+
+    function timer() {
+        seconds += 1;
+        document.querySelector("#time p").innerHTML = "You have hovered for " + seconds;
+    }
+    var stop = setInterval(timer, 1000);
+});
+
+document.querySelector("#time").addEventListener("mouseout", function(){
+
+    document.querySelector("#time").style.backgroundColor = "green";
+    clearInterval(stop);
 });
