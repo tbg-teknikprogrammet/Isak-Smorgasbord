@@ -81,7 +81,7 @@ main section {
 }
 
 #seiz {
-    transition: 3s;
+    transition: 1.4s;
     text-align: center;
 }
 
@@ -90,3 +90,15 @@ main section {
     transition: 4s;
 }
 
+#time {
+    transition: 2s;
+}
+
+#time p {
+    transition: 2s;
+    user-select: none;
+}
+
+span {
+    font-size: 20px;
+}

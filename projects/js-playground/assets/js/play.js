@@ -13,11 +13,16 @@ document.addEventListener("keydown", function(event){
     }
 });
 
+document.querySelector("#dab").style.cursor = "pointer";
+
 // //------------------------------
 
 // SLIDESHOW
 var slideShow = ["assets/images/Dabmeister.jpg", "assets/images/Snke.jpg", "assets/images/Xpoke.jpg"]
 var slideIndex = 1;
+document.querySelector("#next").style.cursor = "pointer";
+document.querySelector("#prev").style.cursor = "pointer";
+
 document.querySelector("#slide img").src=slideShow[slideIndex];
 
 document.querySelector("#prev").addEventListener("click", function(){
@@ -69,21 +74,41 @@ document.addEventListener("keydown", function(event){
 
 // timegame
 
-document.querySelector("#time").addEventListener("mouseover", function(){
+var stop = 0
+var time = document.querySelector("#time")
 
-    document.querySelector("#time").style.backgroundColor = "red";
-
+time.addEventListener("mouseover", function(){
     var seconds = 0;
+    var green = 128
+    var color = "rgb(00," + green + ",00)"
+
+    time.style.backgroundColor = color;
 
     function timer() {
         seconds += 1;
-        document.querySelector("#time p").innerHTML = "You have hovered for " + seconds;
+        document.querySelector("#time p").innerHTML = "You have hovered for " + seconds + " seconds";
+        green += 5;
+        color = "rgb(00," + green + ",00)"
+        if(green > 255) {
+            green = 10;
+            document.querySelector("#time p").style.color = "white";
+        }
+        if(green > 128) {
+            document.querySelector("#time p").style.color = "black";
+        }
+        time.style.backgroundColor = color;
     }
-    var stop = setInterval(timer, 1000);
+    stop = setInterval(timer, 1000);
 });
 
-document.querySelector("#time").addEventListener("mouseout", function(){
+time.addEventListener("mouseout", function(){
 
-    document.querySelector("#time").style.backgroundColor = "green";
+    time.style.backgroundColor = "red";
     clearInterval(stop);
+
+    setTimeout(function() {
+        time.style.backgroundColor = "rgb(44,47,51)";
+        document.querySelector("#time p").innerHTML = "";
+    },3000)
+        
 });
