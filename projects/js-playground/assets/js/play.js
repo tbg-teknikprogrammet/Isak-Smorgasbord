@@ -112,3 +112,20 @@ time.addEventListener("mouseout", function(){
     },3000)
         
 });
+
+//------------------------------
+
+// Click thing
+
+var button = document.querySelector("input");
+
+button.addEventListener("click", function(){
+    console.log("yeet")
+
+    var rn1 = Math.random() * (+200 - +0) + +0;
+    var rn2 = Math.random() * (+200 - +0) + +0;
+
+    margin = rn1 + 0 + 0 + rn2
+
+    button.style.marginLeft = "200px;" // does not work yet
+});

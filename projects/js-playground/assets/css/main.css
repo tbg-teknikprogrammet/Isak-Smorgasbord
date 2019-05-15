@@ -97,8 +97,17 @@ main section {
 #time p {
     transition: 2s;
     user-select: none;
+    font-size: 20px;
+    text-align: center;
 }
 
-span {
-    font-size: 20px;
+#clicker {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#clicker input {
+    height: 20px;
+    margin: 0 0 0 0;
 }
