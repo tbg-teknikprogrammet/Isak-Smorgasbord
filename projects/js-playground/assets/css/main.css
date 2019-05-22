@@ -114,3 +114,27 @@ main section {
     height: 20px;
     z-index: 99;
 }
+
+video {
+    width: 100%;
+}
+
+#videoPlayer p {
+    color: white;
+    margin-bottom: 0;
+}
+
+#volume {
+    width: 40%;
+}
+
+#controller {
+    display: flex;
+    justify-content: center;
+}
+
+#lower-controller {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}

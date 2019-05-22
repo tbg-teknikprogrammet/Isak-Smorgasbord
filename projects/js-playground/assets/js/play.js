@@ -131,3 +131,48 @@ button.addEventListener("click", function(){
     document.querySelector("#clicker p").innerHTML = "You have clicked " + clicks + " times!";
     
 });
+
+//----------------------------------
+
+// Video player
+var video = document.querySelector("#videoPlayer video");
+var play = document.querySelector("#play");
+var slider = document.querySelector("#volume");
+var rewindButton = document.querySelector("#rewind");
+var forwardButton = document.querySelector("#forward");
+var restartButton = document.querySelector("#restart");
+var playState = 0;
+video.volume = 0.2;
+
+
+play.addEventListener("click", function(){
+
+    if(playState == 0) {
+        video.play();
+        playState = 1;
+        play.value = "Pause";
+    }  
+        
+    else if(playState == 1) {
+        video.pause();
+        playState = 0;
+        play.value = "Play";
+    }
+});
+
+slider.oninput = function() {
+    video.volume = this.value/100;
+}
+
+rewindButton.addEventListener("click", function(){
+    video.currentTime = video.currentTime - 5;
+});
+
+forwardButton.addEventListener("click", function(){
+    video.currentTime = video.currentTime + 5;
+});
+
+restartButton.addEventListener("click", function(){
+    video.currentTime = 0;
+});
+
