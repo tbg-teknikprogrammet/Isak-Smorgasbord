@@ -116,16 +116,18 @@ time.addEventListener("mouseout", function(){
 //------------------------------
 
 // Click thing
-
+var clicks = 0;
 var button = document.querySelector("input");
 
 button.addEventListener("click", function(){
-    console.log("yeet")
 
-    var rn1 = Math.random() * (+200 - +0) + +0;
-    var rn2 = Math.random() * (+200 - +0) + +0;
+    var marginLeft = Math.random() * (+89 - +0) + +0; //89
+    var marginTop = Math.random() * (+72 - +0) + +0; // 72
 
-    margin = rn1 + 0 + 0 + rn2
+    button.style.marginLeft = marginLeft + "%";
+    button.style.marginTop = marginTop + "%";
 
-    button.style.marginLeft = "200px;" // does not work yet
+    clicks += 1;
+    document.querySelector("#clicker p").innerHTML = "You have clicked " + clicks + " times!";
+    
 });

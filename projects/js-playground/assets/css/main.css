@@ -101,13 +101,16 @@ main section {
     text-align: center;
 }
 
-#clicker {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+
+#clicker p {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    user-select: none;
 }
 
 #clicker input {
+    position: relative;
     height: 20px;
-    margin: 0 0 0 0;
+    z-index: 99;
 }
