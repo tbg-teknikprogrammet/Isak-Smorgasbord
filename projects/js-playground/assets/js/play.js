@@ -42,10 +42,10 @@ document.querySelector("#next").addEventListener("click", function(){
 });
 // --------------------------------
 
-//Seizure
+//Color change thing
 var cindex = 0
 document.addEventListener("keydown", function(event){
-    if(event.which == 70){
+    if(event.which == 70){ // f
         document.querySelector("h1").innerHTML = "Pressed X to unpay respect";
         
         var colors = ["red", "green", "blue"]
@@ -62,7 +62,7 @@ document.addEventListener("keydown", function(event){
 });
 
 document.addEventListener("keydown", function(event){
-    if(event.which == 88) {
+    if(event.which == 88) { // x
         document.querySelector("#seiz").style.backgroundColor = "rgb(44,47,51)";
 
         document.querySelector("h1").innerHTML = "";
@@ -87,7 +87,7 @@ time.addEventListener("mouseover", function(){
     function timer() {
         seconds += 1;
         document.querySelector("#time p").innerHTML = "You have hovered for " + seconds + " seconds";
-        green += 5;
+        green += 5; // Makes the color change to a different nuance ao green every second.
         color = "rgb(00," + green + ",00)"
         if(green > 255) {
             green = 10;
@@ -121,8 +121,8 @@ var button = document.querySelector("input");
 
 button.addEventListener("click", function(){
 
-    var marginLeft = Math.random() * (+89 - +0) + +0; //89
-    var marginTop = Math.random() * (+72 - +0) + +0; // 72
+    var marginLeft = Math.random() * (+82 - +0) + +0; // gives the button a random margin to move it around
+    var marginTop = Math.random() * (+62 - +0) + +0;
 
     button.style.marginLeft = marginLeft + "%";
     button.style.marginTop = marginTop + "%";
@@ -176,3 +176,4 @@ restartButton.addEventListener("click", function(){
     video.currentTime = 0;
 });
 
+//-------------------------------------------------

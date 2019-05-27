@@ -77,7 +77,6 @@ main section {
 
 #slide p:hover {
     background-color: rgba(199, 199, 199, 0.1);
-    
 }
 
 #seiz {
@@ -101,6 +100,10 @@ main section {
     text-align: center;
 }
 
+#clicker section {
+    display: flex;
+    justify-content: center;
+}
 
 #clicker p {
     position: absolute;
@@ -115,8 +118,15 @@ main section {
     z-index: 99;
 }
 
+#videoPlayer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
 video {
-    width: 100%;
+    width: 85%;
+    margin-bottom: 5px;
 }
 
 #videoPlayer p {
@@ -125,7 +135,7 @@ video {
 }
 
 #volume {
-    width: 40%;
+    width: 100%;
 }
 
 #controller {
@@ -137,4 +147,23 @@ video {
     display: flex;
     flex-flow: column;
     align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #seiz {
+        min-height: 400px;
+    }
+
+    #time {
+        min-height: 400px;
+    }
+
+    #clicker {  /*The clickers thing is hard to make responsive*/
+        min-height: 400px; 
+    }
+    
 }
